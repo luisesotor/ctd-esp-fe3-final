@@ -1,3 +1,15 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,26 +18,44 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+main{
+  flex: 1;
+    padding: 1rem;
+    background-image: url("/public/images/light.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+main
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
+  background-color: rgba(136, 136, 136, 0.309);
   padding: 10px;
   border: none;
   width: 100%;
   cursor: pointer;
+  border-radius: 2rem;
+  margin: 0.5rem;
 }
 
 h1{
   text-align: center;
+  font-size: 2.5rem;
 }
 
 nav{
   display: flex;
-  width: 80vw;
+  width: 100%;
+  justify-content: space-around ;
+  padding: 1rem;
+  align-items: center;
+}
+.menu{
+  display: flex;
   justify-content: flex-start;
   padding: 1rem;
 }
@@ -61,14 +91,7 @@ footer > p{
   padding-top: 0.7rem;
 }
 
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
-}
+
 
 .card{
   display: flex;
@@ -78,6 +101,8 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.622) ;
 }
 
 .card:hover{
@@ -119,4 +144,86 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+.dark h1 {
+  color: rgb(234, 234, 253);
+}
+.dark main{
+  background-image: url("/public/images/dark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.foto{
+  max-width: 10rem;
+  border-radius: 1rem;;
+}
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+.detail{
+  display: grid;
+  place-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+form textarea {
+  height: 100px;
+  resize: none;
+}
+
+form button {
+  padding: 0.7rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form .error {
+  color: red;
+  font-size: 14px;
+}
+
+form .success {
+  color: green;
+  font-size: 14px;
+}
+
+.dark-form input,
+.dark-form textarea {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
 }
