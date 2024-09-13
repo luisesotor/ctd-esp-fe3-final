@@ -21,7 +21,7 @@ body {
 main{
   flex: 1;
     padding: 1rem;
-    background-image: url("/public/images/light.jpg");
+    background-image: url("/images/light.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -149,7 +149,7 @@ tr:nth-child(even) {
   color: rgb(234, 234, 253);
 }
 .dark main{
-  background-image: url("/public/images/dark.jpg");
+  background-image: url("/images/dark.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

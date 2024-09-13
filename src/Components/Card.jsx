@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDentistsState } from "./utils/global.context";
 import { FaStar } from "react-icons/fa";
+import doctorImage from '../assets/doctor.jpg';
 
 const Card = ({ dentist }) => {
   const {state, dispatch} = useDentistsState();
@@ -14,7 +15,7 @@ const Card = ({ dentist }) => {
   return (
     <div className="card">
 
-      <img className="foto" src="/images/doctor.jpg" alt="" />
+      <img className="foto" src={doctorImage} alt="Odontologo" />
       <Link to={`/detail/${dentist.id}` }>
       <h3> {dentist.name} </h3>
       </Link>
